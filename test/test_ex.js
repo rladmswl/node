@@ -15,14 +15,14 @@ books.shift(book);
 // 맨 뒤 삽입
 books.push(book);
 //console.log(books)
-// 맨 뒤 삭
+// 맨 뒤 삭제
 books.pop(book);
 //console.log(books)
-// 인덱스 2에 삽
+// 인덱스 2에 삽입
 books.splice(2,0,book)
 //console.log(books)
-//
-books.splice(2,1) // ??
+// 인덱스 2 삭제
+books.splice(2,1)
 //console.log(books)
 
 // title 바꾸기1
@@ -50,30 +50,21 @@ const p = books.find(function (item) {
 })
 p.price = p.price * 0.9;
 
+console.log(books)
 
-/*
-for i in books {
-    if (books.price > 20) {
-        books.price = books.price * 90
-    }
-
-}
-*/
-
-//console.log(books)
-
-
+// price 합산
 let sum = 0;
 books.forEach(item => sum =+ item.price)
 console.log(sum)
 
 
+// rand > 3인 것 추출
 const higeRandList = books.filter(item => item.rank > 3)
 console.log(higeRandList)
 
 
 
-//
+// title 정렬해서 번호 매기
 const rankTitle = [...books].sort((a, b) => {
         if (a.title > b.title) {
             return 1;
