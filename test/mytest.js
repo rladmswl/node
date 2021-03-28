@@ -19,7 +19,7 @@ let book = {title: "Cinderella", price: 30, author: "Perrault", rank: 5};
 
 // 2. What is the type of books? Are there any Javascript types?
 
-//console.type(books)
+
 
 //3. Add a book object to the front of books array.
 
@@ -76,7 +76,7 @@ console.log(randList)
 // 12. After sorting the title first, create a new array with a rank number before a title
 // the result is
 
-const a = [...books].sort((a, b) => {
+const newArray = [...books].sort((a, b) => {
     if (a.title > b.title) {
         return 1;
     } else if (a.title < b.title) {
@@ -85,7 +85,7 @@ const a = [...books].sort((a, b) => {
         return 0;
     }
 }).map((item, index) => `${index + 1}. ${item.title}. ${item.rank}`)
-console.log(a)
+console.log(newArray)
 
 // 13. 가장 비싼 책의 제목을 출력하시오.
 
